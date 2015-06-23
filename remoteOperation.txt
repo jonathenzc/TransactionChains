@@ -1,0 +1,8 @@
+2 KDH Bed 100
+2 Tim KFC 100
+2 Lina MC 100
+3 Card 5000
+3 House 100
+3 Food 100
+1 Tina Bed 200 100
+1 Tim KFC 200 100

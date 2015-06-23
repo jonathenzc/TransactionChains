@@ -1,0 +1,9 @@
+2 Tom Card 100
+2 Bob House 100
+2 KDH Food 100
+3 Bed 5000
+1 Bob Bed 100 100
+3 KFC 100
+1 KDH KFC 500 100
+3 MC 100
+1 ZC MC 7000 100
