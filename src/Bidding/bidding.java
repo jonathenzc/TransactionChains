@@ -236,12 +236,12 @@ public class bidding extends Thread{
 		updateBiddingPrice(item,price);
 		//Step3: 处理一致性，更新异地item表
 		//生成一个消息线程
-		Random random = new Random();
-		int randomValue = Math.abs(random.nextInt())%500+500;//生成500-1000的随机数
-//		
-		message msg = new message(localOrRemote,0,operIndex,bidder,item,price,backEnd,randomValue);
+//		Random random = new Random();
+//		int randomValue = Math.abs(random.nextInt())%500+500;//生成500-1000的随机数
+////		
+//		message msg = new message(localOrRemote,0,operIndex,bidder,item,price,backEnd,randomValue);
 		//下面message用于测试ordering
-//		message msg = new message(localOrRemote,0,operIndex,bidder,item,price,backEnd,500*(10-operIndex));
+		message msg = new message(localOrRemote,0,operIndex,bidder,item,price,backEnd,500*(20-operIndex));
 		
 //		msg.sleepForSeconds(500*(10-operIndex));//睡眠5秒模拟异地传输的延迟时间
 		msg.start();//在消息run函数中插入异地后端bidToDoQueue
@@ -254,12 +254,12 @@ public class bidding extends Thread{
 		//Step1: 插入本地item表
 		insert(1,seller,item,0);
 		//Step2: 处理一致性，插入异地item表
-		Random random = new Random();
-		int randomValue = Math.abs(random.nextInt())%500+500;//生成500-1000的随机数
-		
-		message msg = new message(localOrRemote,1,operIndex,seller,item,0,backEnd,randomValue);
+//		Random random = new Random();
+//		int randomValue = Math.abs(random.nextInt())%500+500;//生成500-1000的随机数
+//		
+//		message msg = new message(localOrRemote,1,operIndex,seller,item,0,backEnd,randomValue);
 		//下面message用于测试ordering
-//		message msg = new message(localOrRemote,1,operIndex,seller,item,0,backEnd,500*(10-operIndex));
+		message msg = new message(localOrRemote,1,operIndex,seller,item,0,backEnd,500*(20-operIndex));
 //		msg.sleepForSeconds(500);//睡眠5秒模拟异地传输的延迟时间 到时候改成随机
 		msg.start();//在消息run函数中插入异地后端raisingBidToDoQueue
 	}
